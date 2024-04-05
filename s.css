@@ -1,0 +1,29 @@
+﻿*{
+    background-color:azure;
+}
+.head {
+    display: flex;
+    border-bottom-style: hidden;
+    background-color: bisque;
+}
+
+    .head .nav {
+        padding: 10px;
+        justify-content: center;
+        display: grid;
+        grid: auto;
+        
+    }
+    .head .nav img {
+        width: 60px;
+        border-radius:25px;
+    }
+    .head .nav span {
+        text-align:center;
+        font-weight: bold;
+        color: black;
+        font-family: 'Roboto', sans-serif;
+    }
+    .head .nav h2{
+        text-align:right;
+    }

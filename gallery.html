@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+    
+ *{
+    background-image: url(./img/background.jpg);
+ }   
+ 
+.head{
+    text-align: center;
+    color: red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.image:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    font-size: 20px;
+    text-align: center;
+}
+
+.text:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+   <section id="Minimalistic" class="Minimalistic">
+    <h1 class="head">Minimalistic</h1> 
+    <div class="gallery">
+        <div class="image">
+            <img src="./img/g1.jpg" alt="Image 1">
+            <div class="overlay">
+                <div class="text">Image 1</div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./img/g2.jpg" alt="Image 2">
+            <div class="overlay">
+                <div class="text">Image 2</div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./img/g3.jpg" alt="Image 3">
+            <div class="overlay">
+                <div class="text">Image 3</div>
+            </div>
+        </div>
+        <!-- Add more images here -->
+    </div>
+</section>
+
+<section id="Vintage" class="Vintage"> 
+    <h1 class="head">Vintage</h1>
+    <div class="gallery">
+        <div class="image">
+            <img src="./img/g4.jpg" alt="Image 1">
+            <div class="overlay">
+                <div class="text">Image 1</div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./img/g5.jpg" alt="Image 2">
+            <div class="overlay">
+                <div class="text">Image 2</div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./img/g6.jpg" alt="Image 3">
+            <div class="overlay">
+                <div class="text">Image 3</div>
+            </div>
+        </div>
+        <!-- Add more images here -->
+    </div>
+</section>
+
+
+<section id="Modern and sleek" class="Modern and sleek"> 
+    <h1 class="head">Modern and sleek</h1>
+    <div class="gallery">
+        <div class="image">
+            <img src="./img/g7.jpg" alt="Image 1">
+            <div class="overlay">
+                <div class="text">Image 1</div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./img/g8.jpg" alt="Image 2">
+            <div class="overlay">
+                <div class="text">Image 2</div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="./img/g9.jpg" alt="Image 3">
+            <div class="overlay">
+                <div class="text">Image 3</div>
+            </div>
+        </div>
+        <!-- Add more images here -->
+    </div>
+</section>
+
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+
+:root{
+--main-color:#d3ad7f;
+--black:#13131a;
+--bg:#010103;
+--border:.1rem solid rgba(255,255,255,.3);
+}
+body {
+font-family: 'Arial', sans-serif;
+margin: 0;
+padding: 0;
+background-color: beige;
+}
+
+.container {
+max-width: 800px;
+margin: 50px auto;
+padding: 20px;
+}
+
+.portfolio-item {
+position: relative;
+overflow: hidden;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+width: 100%;
+display: block;
+transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+transform: scale(1.1);
+}
+
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .overlay {
+opacity: 1;
+}
+
+.text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+color: #fff;
+}
+
+.text h2 {
+margin-bottom: 20px;
+font-size: 24px;
+color: #ffd700;
+}
+
+.text p {
+margin-bottom: 20px;
+font-size: 16px;
+}
+
+.text2 iframe {
+
+width: 100%;
+max-width: 600px;
+height: 315px;
+border: none;
+border-radius: 8px;
+}
+
+
+.header{
+background:var(--bg);
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0.5rem 3%;
+border-bottom:var(--border);
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:1000;
+}
+.header .logo img 
+{
+height: 3rem;
+border-radius:50px;
+}
+.header .navbar a{
+margin:0 1rem;
+font-size:1rem;
+color:#fff;
+}
+.header .navbar a:hover{
+color:var(--main-color);
+border-bottom: .1rem solid var(--main-color);
+padding-bottom:.5rem;
+}
+
+.whatsapp-icon{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+
+}
+
+.whatsapp-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #25d366;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-button img {
+    border-radius: 25px;
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
+}
+
+.whatsapp-button:hover img {
+    transform: scale(1.2);
+}
+
+.whatsapp-button span {
+    position: relative;
+    z-index: 1;
+}

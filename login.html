@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        button,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #555;
+            font-size: 16px;
+        }
+
+        input[type="file"] {
+            padding-top: 15px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        label {
+            position: absolute;
+            top: 13px;
+            left: 10px;
+            color: #888;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+
+        .form-group input[type="file"] + label {
+            top: -7px;
+        }
+
+        .form-group input:focus + label,
+        .form-group textarea:focus + label,
+        .form-group input[type="file"]:focus + label {
+            top: -20px;
+            font-size: 12px;
+            color: #4caf50;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            button:hover {
+                background-color: #2980b9;
+            }
+        .hide-label{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Apply for a Job</h2>
+        <form action="#" method="POST" id="hire" onsubmit="submitform()" >
+            <div class="form-group">
+                <input onchange="inputchange(this)" type="text" id="fullname" name="fullname" required>
+                <label for="fullname">Full Name</label>
+            </div>
+            <div class="form-group">
+                <input onchange="inputchange(this)" type="email" id="email" name="email"required>
+                <label for="email">Email</label>
+            </div>
+            <div class="form-group">
+                <input onchange="inputchange(this)" type="tel" id="phone" name="phone" pattern="^[789]\d{9,9}$" required>
+                <label for="phone">Phone</label>
+            </div>
+            <!-- <div class="form-group">
+         <input type="file" id="resume" name="resume" onchange="getfile(event)" accept=".pdf,.doc" required>
+         <label for="phone">resume</label>
+     </div>
+    -->
+            <div class="form-group">
+                <textarea onchange="inputchange(this)" id="coverletter" name="coverletter" rows="4" required></textarea>
+                <label for="coverletter">Cover Letter</label>
+            </div>
+            <button type="submit" id="submit">Submit Application</button>
+            
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="Script1.js"></script>
+</body>
+</html>
